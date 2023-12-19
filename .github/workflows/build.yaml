@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Install Google Fonts
         run: |
+          mkdir .cache
           wget -O fonts.zip https://fonts.google.com/download?family=$FONT_NAME
           unzip -d .cache/fonts/ fonts.zip
           
