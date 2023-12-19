@@ -11,24 +11,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
       - name: Install Google Fonts
         run: |
           mkdir .cache
           wget -O fonts.zip https://fonts.google.com/download?family=$FONT_NAME
           unzip -d .cache/fonts/ fonts.zip
           
-      - name: Checkout
-        uses: actions/checkout@v3
       - uses: yusancky/setup-typst@v2
         id: setup-typst
         with:
           version: 'v0.10.0'
-      - run: typst compile --font-path .cache/fonts/static/ --root . main.typ main.pdf
+          
+      - run: typst compile --font-path .cache/fonts/static/ --root . main.typ output.pdf
+      
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: PDF
-          path: "*.pdf"
+          name: output.pdf
+          path: output.pdf
 
       - name: Get current date
         id: date
@@ -39,4 +42,4 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: main.pdf
+          files: output.pdf
