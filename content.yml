@@ -1,0 +1,46 @@
+name: Alma Rozanès
+presentation: |-
+  J’aime prendre part à toutes les étapes du processus de développement logiciel. De la conception UX ou technique, en passant par l'écriture de code au DevOps, je m’épanouis dans un environnement diversifié et novateur où être force de proposition et curiosité riment avec client enchanté.
+skills:
+  - title: Langages
+    items:
+      - Java
+      - Typescript
+      - Kotlin
+  - title: Frameworks
+    items:
+      - Spring Boot/Cloud
+      - React 17
+      - Angular 16
+experiences:
+  - name: MAIF
+    title: Dev full-stack
+    dates: Mars 2021 - Juin 2023
+    description: |-
+      Au sein d’une équipe de data scientist, conception et développement complet d’applicatifs permettant de proposer, de déployer, d’intégrer ainsi que de monitorer et d’améliorer les solutions développées par cette même équipe.
+    skills:
+      - Java
+      - Kotlin
+      - Spring Boot
+      - Spring Cloud Gateway
+      - Spring Webflux
+      - React
+      - Typescript
+      - Docker
+      - Kubernetes
+      - Helm
+      - Jenkins
+      - Kafka
+      - Rasa
+    work:
+      - title: Conception et développement
+        content: |-
+           - Création d'un outil de suivi et de recherche pour les chatbots de la MAIF, les serveurs vocaux et l'aide aux conseillers :
+             - Conception et développement de l'**architecture** globale de la solution pour prendre en compte les besoins des utilisateurs finaux et assurer la stabilité et les performances globales de l'application.
+             - Conception de l'**UX** / **UI**
+             - Optimisation de l'expérience des conseillers, data scientists et clients de la MAIF grâce à la détection des erreurs.
+           - Développements et maintenance sur un widget de chatbot, intégration dans leurs applications
+           - Modernisation complète de l'infrastructure réseau des chatbots
+             - mise en œuvre d'un serveur Spring Boot Webflux et d'une gateway personnalisée
+             - offre un accès simplifié et sécurisé aux applications de l'équipe. Avancées considérables en matière de sécurité et de simplification des processus pourl'ensemble de l'infrastructure.
+           - Développement d’un service d'agrégation de données depuis **Kafka** vers une base de donnée **Redis** avec **Spring Webflux**
