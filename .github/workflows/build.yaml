@@ -14,7 +14,9 @@ jobs:
       - name: Typst
         uses: lvignoli/typst-action@main
         with:
-          options: --font-path fonts
+          options: |
+            --font-path
+            fonts
           source_file: template.typ
 
       - name: Upload PDF file
