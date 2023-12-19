@@ -14,7 +14,7 @@ jobs:
         id: setup-typst
         with:
           version: 'v0.10.0'
-      - run: typst compile --font-path .template/fonts .template/template.typ main.pdf
+      - run: typst compile --font-path .template/fonts .template/template.typ --root . main.pdf
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
