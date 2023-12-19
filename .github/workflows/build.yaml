@@ -14,7 +14,7 @@ jobs:
         id: setup-typst
         with:
           version: 'v0.10.0'
-      - run: typst compile --font-path fonts template.typ main.pdf
+      - run: typst compile --font-path .template/fonts .template/template.typ main.pdf
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
-        # if: github.ref_type == 'tag'
+        if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
           files: main.pdf

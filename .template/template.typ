@@ -81,7 +81,7 @@
 ]
 
 
-#let content = yaml("content.yml")
+#let content = yaml("../content.yml")
 
 #presentation(content)
 #skills(content)
