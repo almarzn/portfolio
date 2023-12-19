@@ -4,17 +4,25 @@ on: [push, workflow_dispatch]
 permissions:
   contents: write
 
+env:
+  FONT_NAME: Lexend
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Google Fonts
+        run: |
+          wget -O fonts.zip https://fonts.google.com/download?family=$FONT_NAME
+          unzip -d .cache/fonts/ fonts.zip
+          
       - name: Checkout
         uses: actions/checkout@v3
       - uses: yusancky/setup-typst@v2
         id: setup-typst
         with:
           version: 'v0.10.0'
-      - run: typst compile --font-path .template/fonts --root . main.typ main.pdf
+      - run: typst compile --font-path .cache/fonts --root . main.typ main.pdf
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
