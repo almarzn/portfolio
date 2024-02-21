@@ -1,22 +1,25 @@
 
 #let presentation(contents) = [
-  = #contents.name
+  = #contents.profile.name
 
   #set text(weight: "light")
-  #contents.presentation
 ]
 
 #let skills(contents) = [
-  == Compétences
+  #set par(justify: false)
+  == À propos
 
-  #grid(
-    columns: (1fr, 2fr),
-    gutter: 12pt,
-    ..contents.skills.flatten().map(it => ([
-      #set text(weight: "light")
-      #it.title
-    ], it.items.join(" // "))).flatten(),
-  )
+  #contents.presentation
+
+  === Compétences
+
+  #for skill in contents.skills [
+    ==== #skill.title
+
+    #for item in skill.items [
+      - #item
+    ]
+  ]
 
 ]
 

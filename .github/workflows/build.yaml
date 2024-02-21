@@ -13,25 +13,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
-      - name: Install Google Fonts
-        run: |
-          mkdir .cache
-          wget -O fonts.zip https://fonts.google.com/download?family=$FONT_NAME
-          unzip -d .cache/fonts/ fonts.zip
-          
       - uses: yusancky/setup-typst@v2
         id: setup-typst
         with:
           version: 'v0.10.0'
-          
-      - run: typst compile --font-path .cache/fonts/static/ --root . main.typ output.pdf
-      
+      - uses: r-lib/actions/setup-pandoc@v1
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - run: npm ci
+      - run: EXECUTOR=local node index.mjs
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: output.pdf
-          path: output.pdf
+          name: output
+          path: dist/output/*
 
       - name: Get current date
         id: date
@@ -42,4 +38,4 @@ jobs:
         if: github.ref_type == 'tag'
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: output.pdf
+          files: dist/output/*
