@@ -1,5 +1,5 @@
 profile: 
-  name: Alma Rozanès
+  name: ARO
   pronouns: (elle)
   title: Développeuse Fullstack
 presentation: |-
@@ -16,25 +16,16 @@ skills:
       - React 17
       - Angular 16
 experiences:
-  - name: MAIF
+  - name: XXXX
     title: Dev full-stack
     dates: Mars 2021 - Juin 2023
     description: |-
       Au sein d’une équipe de data scientist, conception et développement complet d’applicatifs permettant de proposer, de déployer, d’intégrer ainsi que de monitorer et d’améliorer les solutions développées par cette même équipe.
     skills:
       - Java
-      - Kotlin
       - Spring Boot
       - Spring Cloud Gateway
       - Spring Webflux
-      - React
-      - Typescript
-      - Docker
-      - Kubernetes
-      - Helm
-      - Jenkins
-      - Kafka
-      - Rasa
     work:
       - title: Conception et développement
         content: |-
