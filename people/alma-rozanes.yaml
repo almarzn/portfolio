@@ -1,20 +1,17 @@
 profile: 
-  name: Alma Rozanès
+  name: ARO
   pronouns: (elle)
-  title: Développeuse Fullstack
+  title: Développeur.se Fullstack
 presentation: |-
   J’aime prendre part à toutes les étapes du processus de développement logiciel. De la conception UX ou technique, en passant par l'écriture de code au DevOps, je m’épanouis dans un environnement diversifié et novateur où être force de proposition et curiosité riment avec client enchanté.
 skills:
   - title: Langages
     items:
       - Java
-      - Typescript
       - Kotlin
   - title: Frameworks
     items:
       - Spring Boot/Cloud
-      - React 17
-      - Angular 16
 experiences:
   - name: MAIF
     title: Dev full-stack
@@ -27,14 +24,6 @@ experiences:
       - Spring Boot
       - Spring Cloud Gateway
       - Spring Webflux
-      - React
-      - Typescript
-      - Docker
-      - Kubernetes
-      - Helm
-      - Jenkins
-      - Kafka
-      - Rasa
     work:
       - title: Conception et développement
         content: |-
