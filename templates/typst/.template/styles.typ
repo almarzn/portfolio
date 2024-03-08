@@ -5,12 +5,14 @@
 #let margin-small = block.with(inset: (x: 8pt));
 #let margin-medium = block.with(inset: (x: 16pt));
 #let margin-large = block.with(inset: (x: 32pt));
+#let margin-xlarge = block.with(inset: (x: 48pt));
 
 #let default(body) = {
   let footer-size = 64pt
   let base-margin = 24pt
 
   // set block(stroke: (paint: blue, thickness: 1pt, dash: "dashed"))
+  // set grid(st: (paint: yellow, thickness: 1pt, dash: "dashed"))
 
   set page(
     background: page-background(color: tailwind.orange-400),
@@ -48,17 +50,17 @@
   show heading.where(level: 2): set text(size: scale.h2, fill: tailwind.orange-500)
   show heading.where(level: 2): set block(spacing: 0pt)
 
-  show heading.where(level: 3): set text(weight: "medium", size: scale.h3)
+  show heading.where(level: 3): set text(weight: "extrabold", size: scale.h3)
   // show heading.where(level: 3): set block(spacing: 20pt)
 
-  show heading.where(level: 4): set text(weight: "regular", size: scale.h4)
+  show heading.where(level: 4): set text(weight: "semibold", size: scale.h4)
   // show heading.where(level: 4): set block(spacing: 20pt)
 
   show heading.where(level: 5): set text(weight: "light", size: scale.h5)
   // show heading.where(level: 5): set block(spacing: 10pt)
-  // show heading.where(level: 5): it => {
-  //   upper(it)
-  // }
+  show heading.where(level: 5): it => {
+    upper(it)
+  }
   body
 }
 
@@ -66,7 +68,13 @@
   icon,
   text
 ) = [
-  == #box(width: 32pt, align(center, icon)) #text
+  == #grid(
+    columns: (32pt, auto, 1fr),
+    column-gutter: 12pt,
+    align(center + horizon, block(icon)),
+    align(horizon, text),
+    align(horizon, line(length: 100%, stroke: (paint: tailwind.orange-400, thickness: 3pt, cap: "round"))),
+  )
 ]
 
 // #let section-heading(

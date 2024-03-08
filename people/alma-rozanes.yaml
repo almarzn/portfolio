@@ -71,6 +71,18 @@ experiences:
       - Jenkins
       - Kafka
       - Rasa
+    work:
+      - title: Conception et développement
+        content: |-
+           - Création d'un outil de suivi et de recherche pour les chatbots de la MAIF, les serveurs vocaux et l'aide aux conseillers :
+             - Conception et développement de l'**architecture** globale de la solution pour prendre en compte les besoins des utilisateurs finaux et assurer la stabilité et les performances globales de l'application.
+             - Conception de l'**UX** / **UI**
+             - Optimisation de l'expérience des conseillers, data scientists et clients de la MAIF grâce à la détection des erreurs.
+           - Développements et maintenance sur un widget de chatbot, intégration dans leurs applications
+           - Modernisation complète de l'infrastructure réseau des chatbots
+             - mise en œuvre d'un serveur Spring Boot Webflux et d'une gateway personnalisée
+             - offre un accès simplifié et sécurisé aux applications de l'équipe. Avancées considérables en matière de sécurité et de simplification des processus pourl'ensemble de l'infrastructure.
+           - Développement d’un service d'agrégation de données depuis **Kafka** vers une base de donnée **Redis** avec **Spring Webflux**
   - name: Sopra Steria
     title: Développeuse Java
     dates: Septembre 2020 - Février 2021

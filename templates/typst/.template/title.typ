@@ -10,7 +10,7 @@
   let body = [
     #grid(
       gutter: 16pt,
-      [ == #text(weight: "bold", fill: tailwind.orange-500, profile.title) ],
+      [ == #profile.title ],
       [ = #text(weight: "black", upper(profile.name)) ],
       [ #profile.tagline ]
     )

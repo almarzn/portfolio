@@ -74,6 +74,19 @@ experiences:
       - Typescript
       - Rxjs
       - Leaflet
+
+    work:
+      - title: Conception et développement
+        content: |-
+           - Création d'un outil de suivi et de recherche pour les chatbots de la MAIF, les serveurs vocaux et l'aide aux conseillers :
+             - Conception et développement de l'**architecture** globale de la solution pour prendre en compte les besoins des utilisateurs finaux et assurer la stabilité et les performances globales de l'application.
+             - Conception de l'**UX** / **UI**
+             - Optimisation de l'expérience des conseillers, data scientists et clients de la MAIF grâce à la détection des erreurs.
+           - Développements et maintenance sur un widget de chatbot, intégration dans leurs applications
+           - Modernisation complète de l'infrastructure réseau des chatbots
+             - mise en œuvre d'un serveur Spring Boot Webflux et d'une gateway personnalisée
+             - offre un accès simplifié et sécurisé aux applications de l'équipe. Avancées considérables en matière de sécurité et de simplification des processus pourl'ensemble de l'infrastructure.
+           - Développement d’un service d'agrégation de données depuis **Kafka** vers une base de donnée **Redis** avec **Spring Webflux**
   - name: MAIF
     title: Développeuse Full stack Java Kotlin
     dates: Mars 2021 - Août 2023
@@ -93,6 +106,10 @@ experiences:
       - Jenkins
       - Kafka
       - Rasa
+    work:
+      - title: Développements
+        content: Développement et maintenance d'une application web de gestion et de recherche documentaire, spécification et ajout de fonctionnalités, réalisation et maintenance d’un microservice de publication, développement d’un moteur de rendu, d’un taglib JSP complet, modification de Saiku BI 2.6 pour intégration, indexation avec Apache Lucene, et développement d’une application Angular + Spring + Hibernate avec mise en place de tests unitaires et d’intégration.
+
   - name: Sopra Steria
     title: Développeuse Java
     dates: Septembre 2020 - Février 2021
@@ -103,6 +120,10 @@ experiences:
       - Struts
       - JSP
       - AS400
+    work:
+      - title: Développements
+        content: Développement et maintenance d'une application web de gestion et de recherche documentaire, spécification et ajout de fonctionnalités, réalisation et maintenance d’un microservice de publication, développement d’un moteur de rendu, d’un taglib JSP complet, modification de Saiku BI 2.6 pour intégration, indexation avec Apache Lucene, et développement d’une application Angular + Spring + Hibernate avec mise en place de tests unitaires et d’intégration.
+
   - name: DECALOG
     title: Développeur Full Stack
     dates: Octobre 2018 - Août 2020
@@ -123,3 +144,6 @@ experiences:
       - MySQL
       - Postgres
       - Hibernate
+    work:
+      - title: Développements
+        content: Développement et maintenance d'une application web de gestion et de recherche documentaire, spécification et ajout de fonctionnalités, réalisation et maintenance d’un microservice de publication, développement d’un moteur de rendu, d’un taglib JSP complet, modification de Saiku BI 2.6 pour intégration, indexation avec Apache Lucene, et développement d’une application Angular + Spring + Hibernate avec mise en place de tests unitaires et d’intégration.

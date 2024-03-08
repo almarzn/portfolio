@@ -70,7 +70,7 @@
     create-block-description.with([CI/CD], "ci_cd"),
     create-block-description.with([SGBD], "databases"),
     create-block-description.with([Outils], "tools"),
-    create-block-description.with([Méthodo], "methodologies"),
+    create-block-description.with([Méthodologies], "methodologies"),
     create-block-description.with([Langues], "spoken_languages")
   )
 )
