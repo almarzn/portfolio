@@ -2,8 +2,15 @@
 #import "./shared/sizes.typ": scale
 #import "@preview/splash:0.3.0": tailwind
 
+#let margin-small = block.with(inset: (x: 8pt));
+#let margin-medium = block.with(inset: (x: 16pt));
+#let margin-large = block.with(inset: (x: 32pt));
+
 #let default(body) = {
   let footer-size = 64pt
+  let base-margin = 24pt
+
+  // set block(stroke: (paint: blue, thickness: 1pt, dash: "dashed"))
 
   set page(
     background: page-background(color: tailwind.orange-400),
@@ -24,7 +31,7 @@
         )
       )
     ),
-    margin: (x: 0pt, top: 48pt, bottom: footer-size)
+    margin: (x: 0pt, top: 0pt, bottom: footer-size)
   )
   
   set text(font: "Lexend")
@@ -32,26 +39,25 @@
 
   set heading(numbering: none)
 
-  // show heading.where(level: 1): set text(weight: "bold", size: sizes.h1, tracking: 6pt, primary)
-  // show heading.where(level: 1): set block(below: 30pt)
+  show heading.where(level: 1): set text(size: scale.h1)
+  show heading.where(level: 1): set block(below: 20pt)
   // show heading.where(level: 1): it => {
   //   upper(it)
   // }
 
-  // show heading.where(level: 2): set text(weight: "semibold", size: sizes.h2, primary)
-  // show heading.where(level: 2): set block(spacing: 20pt)
+  show heading.where(level: 2): set text(size: scale.h2, fill: tailwind.orange-500)
+  show heading.where(level: 2): set block(spacing: 0pt)
 
-  // show heading.where(level: 3): set text(weight: "medium", size: sizes.h3)
+  show heading.where(level: 3): set text(weight: "medium", size: scale.h3)
   // show heading.where(level: 3): set block(spacing: 20pt)
 
-  // show heading.where(level: 4): set text(weight: "regular", size: 14.58pt)
+  show heading.where(level: 4): set text(weight: "regular", size: scale.h4)
   // show heading.where(level: 4): set block(spacing: 20pt)
 
-  // show heading.where(level: 5): set text(weight: "light", size: 13.67pt)
+  show heading.where(level: 5): set text(weight: "light", size: scale.h5)
   // show heading.where(level: 5): set block(spacing: 10pt)
   // show heading.where(level: 5): it => {
   //   upper(it)
   // }
-
   body
 }

@@ -2,6 +2,8 @@ profile:
   name: Alma Rozanès
   pronouns: (elle)
   title: Développeuse Fullstack
+  experience: 5 ans
+  availability: mars 2024
 presentation: |-
   Je m’épanouis dans un environnement diversifié et novateur où force de proposition et curiosité riment avec challenge relevé. Passionnée par la veille technologique, je partage mes découvertes sur https://github.com/almarzn.
 skills:
@@ -12,7 +14,9 @@ skills:
   frameworks:
     - ReactJs
     - Angular
-    - Spring [Boot, Security, Gateway, Webflux]
+    - Spring Boot
+    - Spring Cloud
+    - Spring Webflux
   systems:
     - macOS
     - Windows
@@ -35,7 +39,15 @@ skills:
   methodologies:
     - Agile
   spoken_languages:
-    - Bilingual English
+    - "Anglais : Bilingue"
+    - "Francais : Natif"
+education:
+  - name: Diplôme informatique
+    location: IUT Lyon
+    dates: 2018 - 2023
+  - name: These de math
+    location: Faculté Lyon
+    dates: "2024"
 experiences:
   - name: ENEDIS
     title: Développeuse Full stack Java/Angular
