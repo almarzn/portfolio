@@ -61,3 +61,17 @@
   // }
   body
 }
+
+#let section-heading(
+  icon,
+  text
+) = [
+  == #box(width: 32pt, align(center, icon)) #text
+]
+
+// #let section-heading(
+//   icon,
+//   content
+// ) = block(inset: 8pt, radius: 4pt, fill: tailwind.orange-400)[
+//   == #text(fill: white, [#box(width: 32pt, align(center + horizon, icon)) #content])
+// ]

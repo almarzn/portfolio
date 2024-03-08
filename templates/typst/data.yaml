@@ -41,6 +41,16 @@ skills:
   spoken_languages:
     - "Anglais : Bilingue"
     - "Francais : Natif"
+links:
+  - icon: github
+    text: almarzn
+    url: https://github.com/almarzn
+  - icon: linkedin
+    text: alma.rozanes
+    url: https://linkedin.com/alma.rozanes
+  - icon: twitter
+    text: almaaaa
+    url: https://linkedin.com/alma.rozanes
 education:
   - name: Diplôme informatique
     location: IUT Lyon

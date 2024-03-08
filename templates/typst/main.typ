@@ -1,9 +1,11 @@
 // @font-face(https://fonts.google.com/download?family=Lexend)
 
+#import "@preview/fontawesome:0.1.0": *
 #import ".template/title.typ": title
 #import ".template/competencies.typ": competencies
 #import ".template/about.typ": about-section
 #import ".template/education.typ": education
+#import ".template/presentation.typ": presentation-section
 #import ".template/styles.typ"
 
 #let content = yaml("data.yaml")
@@ -24,21 +26,20 @@
 
       styles.margin-large()[
         #set par(justify: true)
-        #content.presentation
+        
+        #presentation-section(content.presentation, content.links)
       ],
 
       styles.margin-large()[
-        == Compétences
+        #styles.section-heading(fa-list-check(), [Compétences])
       ],
 
       styles.margin-small(
-        block(
-          competencies(content.skills)
-        )
+        competencies(content.skills)
       ),
 
       styles.margin-large()[
-        == Formations
+        #styles.section-heading(fa-user-graduate(), [Éducation])
       ],
 
       styles.margin-large()[

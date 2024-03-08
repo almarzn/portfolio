@@ -16,16 +16,14 @@
 
 ]
 
-#let competency-block(radius: 12pt, element) = block(width: 124.815pt)[
+#let competency-block(radius: 12pt, element) = block(width: 127pt)[
   #block(
     fill: white,
     width: 100%,
     radius: radius,
     inset: 8pt,
     align(center + horizon)[
-      [
-        #text(fill: tailwind.orange-500, weight: "semibold", size: scale.h6, element.name)
-      ]
+      #text(weight: "bold", size: scale.h6, element.name)
     ]
   )
 
@@ -41,18 +39,19 @@
 
     let max-height = calc.max(..blocks.map(block => measure(block, styles).height))
 
-    for el in blocks {
-        box(
-          height: (max-height) + 32pt,
+
+    grid(
+      columns: 4,
+      gutter: 8pt,
+      ..blocks.map(el => box(
+          height: (max-height) + 20pt,
           radius: 8pt,
           inset: 4pt,
           fill: tailwind.slate-100,
           align(top, el)
-        )
-
-        h(8pt)
-      }
-    })
+      ))
+    )
+  })
 ]
 
 #let create-block-description(name, id, content, color: tailwind.slate-100) =  {
