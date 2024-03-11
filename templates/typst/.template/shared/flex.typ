@@ -7,7 +7,7 @@
 #let row(gap, children) = {
   let (first, ..other) = children
 
-  set par(leading: gap)
+  // set par(leading: gap)
 
   first
 

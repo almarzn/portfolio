@@ -58,9 +58,9 @@
 
   show heading.where(level: 5): set text(weight: "light", size: scale.h5)
   // show heading.where(level: 5): set block(spacing: 10pt)
-  show heading.where(level: 5): it => {
-    upper(it)
-  }
+  // show heading.where(level: 4): it => {
+  //   upper(it)
+  // }
   body
 }
 

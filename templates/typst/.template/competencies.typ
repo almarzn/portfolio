@@ -1,4 +1,5 @@
 #import "./shared/sizes.typ": scale
+#import "./shared/flex.typ": flex
 #import "@preview/splash:0.3.0": tailwind
 
 
@@ -18,10 +19,10 @@
 
 #let competency-block(radius: 12pt, element) = block(width: 127pt)[
   #block(
-    fill: white,
+    // fill: white,
     width: 100%,
-    radius: radius,
-    inset: 8pt,
+    // radius: radius,
+    inset: (top: 8pt),
     align(center + horizon)[
       #text(weight: "bold", size: scale.h6, element.name)
     ]
@@ -80,7 +81,21 @@
   //   content.languages + content.frameworks
   // )
 
-  competency-grid(
-    ..competencies-presets.dev.map(sel => sel(content)).flatten()
-  )
+  let list = competencies-presets.dev.map(sel => sel(content)).flatten()
+    // .fold((), (acc, val) => {
+    //   if (acc.len() > 0 and acc.last().len() < 4) {
+    //     return (..acc.slice(0, acc.len() - 1), acc.last() + val)
+    //   }
+    //   return (..acc.slice(0, acc.len()), (val))
+    // } )
+
+  flex(gap: 8pt)[
+    #competency-grid(
+      ..list.slice(0, 4)
+    )
+
+    #competency-grid(
+      ..list.slice(4, 8)
+    )
+  ]
 }

@@ -14,7 +14,7 @@
 
 #styles.default[
     #block(inset: (x: 24pt), flex(
-      gap: 24pt,
+      gap: 32pt,
       {
         block(
           inset: (x: 24pt, top: 48pt),
@@ -57,7 +57,7 @@
         #place(
           top + right,
           dx: 25pt,
-          dy: 30pt,
+          dy: 34pt,
           image(".template/logo/maxds-logo-light.svg", height: 200pt)
         )
       ], margin: (top: 12pt))

@@ -23,9 +23,9 @@
         #block(
           heading(level: 4, content.title)
         )
+        #set par(justify: true)
+        #content.description
       ]
-
-      #content.description
 
       #flex(gap: 18pt)[
         ==== Réalisations
