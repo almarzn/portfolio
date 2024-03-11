@@ -40,7 +40,6 @@
 
     let max-height = calc.max(..blocks.map(block => measure(block, styles).height))
 
-
     grid(
       columns: 4,
       gutter: 8pt,
@@ -55,47 +54,32 @@
   })
 ]
 
-#let create-block-description(name, id, content, color: tailwind.slate-100) =  {
+#let create-block-description(name, id, content) =  {
   if id in content {
-    return ((name: name, items: content.at(id), color: color))
+    return ((name: name, items: content.at(id)))
   }
 
   return ()
 }
 
-#let competencies-presets = (
-  dev: (
-    create-block-description.with([Langages], "languages", color: tailwind.slate-100),
-    create-block-description.with([Frameworks], "frameworks", color: tailwind.slate-100),
-    create-block-description.with([Tests], "test_automation"),
-    create-block-description.with([CI/CD], "ci_cd"),
-    create-block-description.with([SGBD], "databases"),
-    create-block-description.with([Outils], "tools"),
-    create-block-description.with([Méthodologies], "methodologies"),
-    create-block-description.with([Langues], "spoken_languages")
-  )
-)
 
 #let competencies(content) = {
   // competency-main-skills(
   //   content.languages + content.frameworks
   // )
+  let rows = content
+      .map((item) => (name: item.title, items: item.items))
+      .fold((), (acc, val) => {
+        if (acc.len() == 0 or acc.last().len() == 4) {
+          return (..acc, (val,))
+        }
 
-  let list = competencies-presets.dev.map(sel => sel(content)).flatten()
-    // .fold((), (acc, val) => {
-    //   if (acc.len() > 0 and acc.last().len() < 4) {
-    //     return (..acc.slice(0, acc.len() - 1), acc.last() + val)
-    //   }
-    //   return (..acc.slice(0, acc.len()), (val))
-    // } )
+        return (..acc.slice(0, -1), (..acc.last(), val))
+      })
 
   flex(gap: 8pt)[
-    #competency-grid(
-      ..list.slice(0, 4)
-    )
-
-    #competency-grid(
-      ..list.slice(4, 8)
-    )
+    #for row in rows {
+       competency-grid(..row)
+    }
   ]
 }

@@ -1,4 +1,5 @@
-// @font-face(https://fonts.google.com/download?family=Lexend)
+// @font-face(url=https://fonts.google.com/download?family=Lexend)
+// @font-face(dir=.template/fonts/)
 
 #import "@preview/fontawesome:0.1.0": *
 #import ".template/title.typ": title
@@ -10,7 +11,7 @@
 #import ".template/shared/flex.typ": *
 #import ".template/styles.typ"
 
-#let content = yaml("data.yaml")
+#let content = yaml("data.json")
 
 #styles.default[
     #block(inset: (x: 24pt), flex(
